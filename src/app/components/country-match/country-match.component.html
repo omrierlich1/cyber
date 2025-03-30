@@ -1,0 +1,45 @@
+<!--<div class="container">-->
+<!--  <h2>Match Countries with Capitals</h2>-->
+
+<!--  <div class="countries-list">-->
+<!--    <div *ngFor="let item of countries()">-->
+<!--      <strong>{{item.country}}</strong>-->
+<!--      <select-->
+<!--        [ngModel]="item.selectedCapital"-->
+<!--        (ngModelChange)="selectCapital(item, $event)">-->
+<!--        <option value="">Select capital</option>-->
+<!--        <option *ngFor="let capital of capitals()" [value]="capital">-->
+<!--          {{capital}}-->
+<!--        </option>-->
+<!--      </select>-->
+
+<!--      <span *ngIf="item.isCorrect === true" class="correct">✅</span>-->
+<!--      <span *ngIf="item.isCorrect === false" class="incorrect">❌</span>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="results">-->
+<!--    Correct Answers: {{correctAnswers()}} / {{countries().length}}-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="container">
+  <h2>Match Countries with Capitals</h2>
+  <div class="countries-list">
+    <div *ngFor="let item of countries()">
+      <strong>{{item.country}}</strong>
+      <select [ngModel]="item.selectedCapital"
+              (ngModelChange)="selectCapital(item, $event)">
+        <option value="">Select capital</option>
+        <option *ngFor="let capital of capitals()" [value]="capital">
+          {{capital}}
+        </option>
+      </select>
+      <span *ngIf="item.isCorrect === true" class="correct">✅</span>
+      <span *ngIf="item.isCorrect === false" class="incorrect">❌</span>
+    </div>
+  </div>
+  <div class="results">
+    Correct Answers: {{correctAnswers()}} / {{countries().length}}
+  </div>
+</div>

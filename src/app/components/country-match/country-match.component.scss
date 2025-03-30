@@ -1,0 +1,26 @@
+.container {
+  max-width: 600px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.countries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.correct {
+  color: green;
+  margin-left: 8px;
+}
+
+.incorrect {
+  color: red;
+  margin-left: 8px;
+}
+
+.results {
+  margin-top: 20px;
+  font-weight: bold;
+}
