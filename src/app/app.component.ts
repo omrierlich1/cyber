@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import {CountryMatchComponent} from './components/country-match/country-match.component';
+import {RouterLink, RouterOutlet} from "@angular/router";
 
 @Component({
   selector: 'app-root',
-  imports: [CountryMatchComponent],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   standalone:true

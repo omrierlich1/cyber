@@ -27,7 +27,7 @@
   <h2>Match Countries with Capitals</h2>
   <div class="countries-list">
     <div *ngFor="let item of countries()">
-      <strong>{{item.country}}</strong>
+      <label class="country-label">{{ item.country }}</label>
       <select [ngModel]="item.selectedCapital"
               (ngModelChange)="selectCapital(item, $event)">
         <option value="">Select capital</option>
